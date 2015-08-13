@@ -1,32 +1,26 @@
 
+// Количество итераций цикла. Множителем является модуль сетки.
+// То есть при 10 иетрациях максимальное значение будет 10 * 10 = 100
+@mIterations: 10;
 
+// Вспомогательный класс, генерирующий массив рабочих классов для mixins
+.marginsGenerator (@mi) when (@mi >= 0) {
 
+    @mSize: @module * @mi;
+    .margin-@{mSize} {margin: ~"@{mSize}px";}
+    .margin-top-@{mSize} {margin-top: ~"@{mSize}px";}
+    .margin-right-@{mSize} {margin-right: ~"@{mSize}px";}
+    .margin-bottom-@{mSize} {margin-bottom: ~"@{mSize}px";}
+    .margin-left-@{mSize} {margin-left: ~"@{mSize}px";}
 
-.margin-0 {margin: @module * 0;}
-.margin-top-0 {margin-top: @module * 0;}
-.margin-right-0 {margin-right: @module * 0;}
-.margin-bottom-0 {margin-bottom: @module * 0;}
-.margin-left-0 {margin-left: @module * 0;}
+    // Следующая итерация
+    .marginsGenerator(@mi - 1);
+}
 
+// Вызов цикла
+.marginsGenerator (@mIterations);
 
-.margin-10 {margin: @module * 1;}
-.margin-top-10 {margin-top: @module * 1;}
-.margin-right-10 {margin-right: @module * 1;}
-.margin-bottom-10 {margin-bottom: @module * 1;}
-.margin-left-10 {margin-left: @module * 1;}
-
-
-
-.margin-20 {margin: @module * 2;}
-.margin-top-20 {margin-top: @module * 2;}
-.margin-right-20 {margin-right: @module * 2;}
-.margin-bottom-20 {margin-bottom: @module * 2;}
-.margin-left-20 {margin-left: @module * 2;}
-
-
-
-.margin-30 {margin: @module * 3;}
-.margin-top-30 {margin-top: @module * 3;}
-.margin-right-30 {margin-right: @module * 3;}
-.margin-bottom-30 {margin-bottom: @module * 3;}
-.margin-left-30 {margin-left: @module * 3;}
+.horizontal-center {
+    margin-left: auto;
+    margin-right: auto;
+}

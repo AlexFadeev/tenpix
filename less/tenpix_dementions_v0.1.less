@@ -1,0 +1,31 @@
+
+// Количество итераций цикла. Множителем является модуль сетки.
+// То есть при 10 иетрациях максимальное значение будет 10 * 10 = 100
+@demIterations: 200;
+
+// Вспомогательный класс, генерирующий массив рабочих классов для mixins
+.widthGenerator (@wi) when (@wi >= 0) {
+
+    @demSize: @module * @wi;
+    .width-@{demSize} {width: ~"@{demSize}px";}
+
+    // Следующая итерация
+    .widthGenerator(@wi - 1);
+}
+
+// Вызов цикла
+.widthGenerator (@demIterations);
+
+
+// Вспомогательный класс, генерирующий массив рабочих классов для mixins
+.heightGenerator (@hi) when (@hi >= 0) {
+
+    @size: @module * @hi;
+    .height-@{size} {height: ~"@{size}px";}
+
+    // Следующая итерация
+    .heightGenerator(@hi - 1);
+}
+
+// Вызов цикла
+.heightGenerator (@demIterations);

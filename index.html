@@ -6,11 +6,11 @@
     <meta charset="UTF-8">
 
 
-    <!--<link rel="stylesheet/less" type="text/css" href="less/normalize.less/normalize.less">-->
+    <link rel="stylesheet/less" type="text/css" href="less/normalize.less/normalize.less">
 
     <!--<link rel="stylesheet/less" type="text/css" href="less/tenpix_const_v0.1.less">-->
     <!--<link rel="stylesheet/less" type="text/css" href="less/tenpix_margins_v0.1.less">-->
-    <link rel="stylesheet/less" type="text/css" href="less/tenpix_base_v0.1.less">
+    <!--<link rel="stylesheet/less" type="text/css" href="less/tenpix_base_v0.1.1.less">-->
 
     <link rel="stylesheet/less" type="text/css" href="less/project.less">
 
@@ -18,10 +18,11 @@
 
 </head>
 <body>
-    <div class="container">
+    <div class="wrapper">
         <section class="header">
             <div class="container">
-                <h1>Заголовок</h1>
+                <h1>Особенный CSS-фреймворк Tenpix v0.1</h1>
+                <h3>Разрабатывается специально для удобного и быстрого переноса дизайн-макетов в верстку.</h3>
 
             </div>
         </section>
@@ -33,7 +34,13 @@
         <section class="text">
             <div class="container">
                 <p>
-                    To use it, you have to install Zen Coding plugin for Web IDE/IntelliJ IDEA: go to Zen Coding Project Download Page, download an archive that contains a set of live templates, and extract it to  folder (“~/Library/Preferences/WebIde10/templates” for Mac OS X).
+                    Этот фреймворк работает довольно странно с привычной точки зрения. Но если разобраться, то будет понятно, что он заточен как раз на соблюдение правил типографики и модульной 10-ти пиксельной сетки. В итоге мы получаем довольно удобный css-фреймворк, в котором в тоже время соблюдается и концепция семантического разделения кода. Это когда html, css, js не смешиваются и существуют каждый в своих файлах.
+                </p>
+                <p>
+                    Таким недостатком наделен довольно популярный Bootstrap, результатом работы с которым является огромное количество мусорных классов непосредственно в DOM. Это негативно влияет как на само качество верстки, так и на профессиональный уровень большинства верстальщиков.
+                </p>
+                <p>
+                    В тоже время в фреймворке Tenpix есть возможность и быстрого прототипирования посредством bootstrap-подобного оформления, так как все вспомогательные классы, используемые в less mixins, присутсвуют и в уже сгенерированном css.
                 </p>
             </div>
         </section>

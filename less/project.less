@@ -1,15 +1,54 @@
-@import "tenpix_base_v0.1";
+* {
+  text-rendering: optimizeLegibility;
+  position: relative;
+  //.margin-0;
+}
+//html:not(.touch) * { text-rendering: optimizeSpeed; } // requires modernizr
 
+body {
+  .make-grid;
+}
+
+p {
+  .margin-bottom-20;
+}
+
+.wrapper {
+  .width-500;
+  .horizontal-center;
+  .margin-top-100;
+
+}
 
 .header {
-  .margin-10;
+  .padding-10;
+
+  h1 {
+    .kerning-36;
+    .margin-bottom-10;
+  }
+
+  h3 {
+    .kerning-24;
+    .margin-bottom-20;
+  }
 }
 
 .image {
-  .margin-10;
+  //.margin-10;
+  display: none;
 }
 
 .text {
-  .margin-30;
-  .margin-left-10;
+  .padding-10;
+
+    p{
+      .kerning-18;
+      .margin-bottom-20;
+    }
 }
+
+
+
+
+@import "tenpix_base_v0.1.1.less";

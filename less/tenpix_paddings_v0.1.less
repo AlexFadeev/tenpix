@@ -1,0 +1,23 @@
+
+// Количество итераций цикла. Множителем является модуль сетки.
+// То есть при 10 иетрациях максимальное значение будет 10 * 10 = 100
+@pIterations: 10;
+
+// Вспомогательный класс, генерирующий массив рабочих классов для mixins
+.paddingsGenerator (@pi) when (@pi >= 0) {
+
+  @pSize: @module * @pi;
+
+  .padding-@{pSize} {padding: ~"@{pSize}px";}
+  .padding-top-@{pSize} {padding-top: ~"@{pSize}px";}
+  .padding-right-@{pSize} {padding-right: ~"@{pSize}px";}
+  .padding-bottom-@{pSize} {padding-bottom: ~"@{pSize}px";}
+  .padding-left-@{pSize} {padding-left: ~"@{pSize}px";}
+
+  // Следующая итерация
+  .paddingsGenerator(@pi - 1);
+}
+
+// Вызов цикла
+.paddingsGenerator (@pIterations);
+
