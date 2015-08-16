@@ -6,8 +6,8 @@
 // Вспомогательный класс, генерирующий массив рабочих классов для mixins
 .widthGenerator (@wi) when (@wi >= 0) {
 
-    @demSize: @module * @wi;
-    .width-@{demSize} {width: ~"@{demSize}px";}
+    @wiSize: @module * @wi;
+    .width-@{wi} {width: ~"@{wiSize}px";}
 
     // Следующая итерация
     .widthGenerator(@wi - 1);
@@ -20,8 +20,8 @@
 // Вспомогательный класс, генерирующий массив рабочих классов для mixins
 .heightGenerator (@hi) when (@hi >= 0) {
 
-    @size: @module * @hi;
-    .height-@{size} {height: ~"@{size}px";}
+    @hiSize: @module * @hi;
+    .height-@{hi} {height: ~"@{hiSize}px";}
 
     // Следующая итерация
     .heightGenerator(@hi - 1);

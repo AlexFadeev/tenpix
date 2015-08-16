@@ -7,11 +7,11 @@
 .marginsGenerator (@mi) when (@mi >= 0) {
 
     @mSize: @module * @mi;
-    .margin-@{mSize} {margin: ~"@{mSize}px";}
-    .margin-top-@{mSize} {margin-top: ~"@{mSize}px";}
-    .margin-right-@{mSize} {margin-right: ~"@{mSize}px";}
-    .margin-bottom-@{mSize} {margin-bottom: ~"@{mSize}px";}
-    .margin-left-@{mSize} {margin-left: ~"@{mSize}px";}
+    .margin-@{mi} {margin: ~"@{mSize}px";}
+    .margin-top-@{mi} {margin-top: ~"@{mSize}px";}
+    .margin-right-@{mi} {margin-right: ~"@{mSize}px";}
+    .margin-bottom-@{mi} {margin-bottom: ~"@{mSize}px";}
+    .margin-left-@{mi} {margin-left: ~"@{mSize}px";}
 
     // Следующая итерация
     .marginsGenerator(@mi - 1);

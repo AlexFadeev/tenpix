@@ -88,7 +88,7 @@
         // ............................................................
 
         .fontCalculates (@a) when (@a >= 0) and (@a < @module) {
-            @h: @module*2;
+            @h: @module*2; // Этим параметром можно регулировать высоту, занимаемую строкой, в модулях
 
             line-height: unit(@h, px);
             .baselineSwift(@a; @h); // Рассчитываем смещение базовой линии
@@ -116,10 +116,20 @@
         }
 
         .fontCalculates (@a) when (@a >= (@module*4)) and (@a < (@module*5)) {
-            @h: @module*2;
+            @h: @module*6;
 
             line-height: unit(@h, px);
             .baselineSwift(@a; @h);
         }
+
+        .fontCalculates (@a) when (@a >= (@module*5)) and (@a < (@module*6)) {
+            @h: @module*7;
+
+            line-height: unit(@h, px);
+            .baselineSwift(@a; @h);
+        }
+
+        /* При необходимости использовать шрифты больших размеров, просто скопировать класс .fontCalculates
+        с исправленными параметрами по логике */
     }
 }
