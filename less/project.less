@@ -5,8 +5,12 @@
 }
 //html:not(.touch) * { text-rendering: optimizeSpeed; } // requires modernizr
 
+html {
+  font-family: Opensans;
+}
+
 body {
-  .make-grid;
+
 }
 
 p {
@@ -14,22 +18,22 @@ p {
 }
 
 .wrapper {
-  .width-500;
+  .width-960;
   .horizontal-center;
   .margin-top-100;
-
+  .make-grid;
 }
 
 .header {
-  .padding-10;
+
 
   h1 {
-    .kerning-36;
+    .fontsize-39;
     .margin-bottom-10;
   }
 
   h3 {
-    .kerning-24;
+    .fontsize-24;
     .margin-bottom-20;
   }
 }
@@ -40,14 +44,35 @@ p {
 }
 
 .text {
-  .padding-10;
+  .margin-bottom-60;
 
     p{
-      .kerning-18;
+      .fontsize-15;
       .margin-bottom-20;
     }
 }
 
+.headings {
+
+    span {display: block;}
+
+    .heading-1 { .fontsize-7;}
+    .heading-2 { .fontsize-9;}
+    .heading-3 { .fontsize-11;}
+    .heading-4 { .fontsize-13;}
+    .heading-5 { .fontsize-15;}
+    .heading-6 { .fontsize-18;}
+    .heading-7 { .fontsize-21;}
+    .heading-8 { .fontsize-24;}
+    .heading-9 { .fontsize-27;}
+    .heading-10 { .fontsize-30;}
+    .heading-11 { .fontsize-33;}
+    .heading-12 { .fontsize-36;}
+    .heading-13 { .fontsize-39;}
+    .heading-14 { .fontsize-51;}
+
+
+}
 
 
 

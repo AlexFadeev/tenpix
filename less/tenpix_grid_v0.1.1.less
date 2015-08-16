@@ -1,8 +1,13 @@
 @import "linear-gradient.less/linear-gradient.less";
 
+// Цвет сетки
+
+@gridcolor: RGBA(0, 94, 169, 1);
+
 .make-grid {
 
-    .linear-gradient-twoway(~'0deg, rgba(112,17,7,1) 0%, rgba(255,255,255,0) 3%, rgba(255,255,255,0) 97%, rgba(112,17,7,1) 100%', ~'90deg, rgba(112,17,7,1) 0%, rgba(255,255,255,0) 3%, rgba(255,255,255,0) 97%, rgba(112,17,7,1) 100%');
+    //.linear-gradient-twoway(~'0deg, @{gridColor} 0%, rgba(255,255,255,0) 3%, rgba(255,255,255,0) 97%, @{gridColor} 100%', ~'90deg, @{gridColor} 0%, rgba(255,255,255,0) 3%, rgba(255,255,255,0) 97%, @{gridColor} 100%');
+    .linear-gradient-twoway(~'0deg, rgba(255,255,255,0) 97%, @{gridColor} 100%', ~'90deg, @{gridColor} 0%, rgba(255,255,255,0) 3%');
     
     
     background-size: ~"@{module}px" ~"@{module}px";
