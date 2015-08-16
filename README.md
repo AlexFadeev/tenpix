@@ -1,6 +1,7 @@
 # tenpix
 
-Текущая версия: v0.2a
+[![GitHub tag](https://img.shields.io/github/tag/alexfadeev/tenpix.svg?style=flat-square)](https://github.com/alexfadeev/tenpix/tags)
+[![Software License](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)](LICENSE.md)
 
 Идея фреймворка возникла после наблюдения за мотырствами верстальщиков, которые реализовывали в верстке дизайн-макеты. 
 
